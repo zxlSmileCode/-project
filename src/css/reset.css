@@ -30,6 +30,7 @@ ul,
 ol {
   list-style: none;
 }
+i{font-style:normal;}
 img {
   display: block;
   border: 0;

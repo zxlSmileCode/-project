@@ -1,50 +1,70 @@
 import React, { Component } from 'react';
-import { Carousel, WingBlank } from 'antd-mobile';
 import { store } from '../../store';
+import { Tabs, WhiteSpace, Badge } from 'antd-mobile';
+import './index.scss';
+import { getData } from '../../api';
 
+const tabs = [
+    { title: <Badge >画品</Badge> },
+    { title: <Badge >画展</Badge> },
+    // { title: <Badge >Third Tab</Badge> },
+];
+
+const tabs2 = [
+    { title: 'First Tab', sub: '1' },
+    { title: 'Second Tab', sub: '2' },
+    // { title: 'Third Tab', sub: '3' },
+];
 class Yigou extends Component {
-
     state = {
-        data: ['1', '2', '3'],
-        imgHeight: 176,
+        result: []
     }
-    componentDidMount() {
+    async componentDidMount() {
         store.dispatch({ type: 'UPDATE_TAB', payload: "yigou" })
-        setTimeout(() => {
-            this.setState({
-                data: ['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI'],
-            });
-        }, 100);
+        let { data: { data: { result } } } = await getData('/rest/topicList');
+        console.log(result);
+        this.setState({ result })
     }
     render() {
         return (
-            <WingBlank>
-                <Carousel
-                    autoplay={false}
-                    infinite
-                    beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-                    afterChange={index => console.log('slide to', index)}
+            <div className="yigou">
+                <div className="header">
+                    <img src="imgs/search.png" />
+                    <span>艺购</span>
+                </div>
+                <div style={{height:'44px'}}></div>
+                <Tabs 
+                    tabs={tabs}
+                    initialPage={1}
+                    onChange={(tab, index) => { console.log('onChange', index, tab); }}
+                    onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
                 >
-                    {this.state.data.map(val => (
-                        <a
-                            key={val}
-                            href="http://www.alipay.com"
-                            style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight }}
-                        >
-                            <img
-                                src={`https://zos.alipayobjects.com/rmsportal/${val}.png`}
-                                alt=""
-                                style={{ width: '100%', verticalAlign: 'top' }}
-                                onLoad={() => {
-                                    // fire window resize event to change height
-                                    window.dispatchEvent(new Event('resize'));
-                                    this.setState({ imgHeight: 'auto' });
-                                }}
-                            />
-                        </a>
-                    ))}
-                </Carousel>
-            </WingBlank>
+                    <div className="list" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff' }}>
+                        <ul>
+                            {
+                                this.state.result.map(item =>
+                                    <li key={item.id}>
+                                        <div className="tupian" style={{ width: '335px', height: '170px', background: "url(" + item.topicImg + ")center center / cover no-repeat" }}></div>
+                                        <div className="wenzi">{item.name}</div>
+                                    </li>
+                                )
+                            }
+                        </ul>
+                    </div>
+                    <div className="list" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff' }}>
+                        <ul>
+                            {
+                                this.state.result.map(item =>
+                                    <li key={item.id}>
+                                        <div className="tupian" style={{ width: '335px', height: '170px', background: "url(" + item.topicImg + ")center center / cover no-repeat" }}></div>
+                                        <div className="wenzi">{item.name}</div>
+                                    </li>
+                                )
+                            }
+                        </ul>
+                    </div>
+                </Tabs>
+            </div>
         );
     }
 }

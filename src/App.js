@@ -10,8 +10,9 @@ import Yiyan from './pages/Yiyan';
 import Detail from './pages/Detail';
 import Cart from './pages/Cart';
 import Mine from './pages/Mine';
-import Login from './pages/Login'
-import Reg from './pages/Reg'
+import Login from './pages/Login';
+import Reg from './pages/Reg';
+import Indent from './pages/Indent';
 
 import './App.scss';
 import './assets/icon/iconfont.css';
@@ -41,6 +42,7 @@ class App extends React.Component {
             <Route path='/mine' component={Mine} />
             <Route path='/login' component={Login} />
             <Route path='/reg' component={Reg} />
+            <Route path='/indent' component={Indent} />
             <Redirect from="/" to="/home" />
           </Switch>
         </main>
