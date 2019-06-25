@@ -1,0 +1,153 @@
+html{
+    font-size: 50px;
+}
+body, div, html {
+    /* font-size: .3rem; */
+    font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+}
+body,div{
+    font-size: .3rem;
+}
+a, img, input, textarea {
+    border: none;
+    outline: none;
+}
+.login{
+    width: 100%;
+    height: 13.34rem;
+    background: url(http://h5.jinyishe.cn/static/img/login_bg.285d3fd.png) no-repeat 50%/cover;
+}
+.login .logo{
+    width: 100%;
+    height: 4rem;
+    background: url(http://h5.jinyishe.cn/static/img/logo.9315718.png) no-repeat 50%/contain;
+    background-size: 2rem;
+}
+.login .content {
+    width: 6rem;
+    margin: 0 auto;
+}
+.copyright {
+    font-size: .18rem;
+    color: #fff;
+    position: fixed;
+    bottom: 1.3rem;
+    margin-left: .5rem;
+}
+.login .content_part{
+    margin-bottom: .2rem;
+}
+.login .content_part{
+    width: 100%;
+    height: .9rem;
+    background-color: hsla(0,0%,100%,.7);
+    border-radius: 1rem;
+    font-size: .34rem;
+    line-height: .9rem;
+}
+.login .content_part input
+{
+    margin-left: .4rem;
+    height: .9rem;
+    width: 5.6rem;
+    background-color: hsla(0,0%,100%,0);
+    border-radius: 1rem;
+    font-size: .24rem;
+}
+.align_items {
+    -ms-flex-align: center;
+    align-items: center;
+    box-align: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+}
+.login .content_part {
+    margin-bottom: .2rem;
+}
+.login .content_part {
+    width: 100%;
+    height: .9rem;
+    background-color: hsla(0,0%,100%,.7);
+    border-radius: 1rem;
+    font-size: .34rem;
+    line-height: .9rem;
+}
+.login .getCode input{
+    width: 3.5rem;
+}
+.register .line{
+    width: .03rem;
+    height: .55rem;
+    background: #cccaca;
+}
+.login .getCode .getCode_btn{
+    font-size: .24rem;
+    color: #c9a96e;
+    padding-left: .3rem;
+}
+.login .content_part{
+    margin-bottom: .2rem;
+}
+
+.login .content_part{
+    width: 100%;
+    height: .9rem;
+    background-color: hsla(0,0%,100%,.7);
+    border-radius: 1rem;
+    font-size: .34rem;
+    line-height: .9rem;
+}
+.register .tuijianren{
+    width: 100%;
+    height: 1.1rem;
+    border-bottom: 1px solid #c9a96e;
+    margin-bottom: .3rem;
+    font-size: .24rem;
+    color: #c9a96e;
+}
+.tuijianren_main{
+    padding: 0 .4rem;
+    width: 100%;
+}
+.flex_direction {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.tuijianren_main_title{
+    font-size: .24rem;
+    height: .5rem;
+}
+.tuijianren_main input{
+    font-size: .28rem;
+    background-color: hsla(0,0%,100%,0);
+    color: #c9a96e;
+}
+.login .btn_part{
+    width: 100%;
+    height: .9rem;
+    line-height: .9rem;
+    border-radius: 1rem;
+    font-size: .28rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: .3rem;
+}
+.login .login_btn, .login .register_btn{
+    background-color: #c9a96e;
+}   
+.copyright{
+    font-size: .18rem;
+    color: #fff;
+    position: fixed;
+    bottom: 1.3rem;
+    margin-left: .5rem;
+}
+.register .line{
+    width: .03rem;
+    height: .55rem;
+    background: #cccaca;
+}
+.flex {
+    display: -ms-flexbox;
+    display: flex;
+}
