@@ -5,13 +5,6 @@ import './index.scss';
 class Mine extends Component {
     componentDidMount() {
         store.dispatch({ type: 'UPDATE_TAB', payload: "mine" })
-<<<<<<< HEAD
-      }
-    render() {
-        return (
-            <div>
-                我的
-=======
     }
     goto(path) {
         let { history } = this.props;
@@ -23,7 +16,7 @@ class Mine extends Component {
                 <div className="my_info">
 
                     <div className="my_info_bg" style={{ width: '100%', height: '172px', background: 'url(imgs/beijing.png)no-repeat 50%/cover' }}>
-                        <img src="imgs/mine.png" />
+                        <img src="imgs/mine.png" alt=""/>
                         <sapn>138****4855</sapn>
                     </div>
                     <div className="total_assets">
@@ -110,7 +103,6 @@ class Mine extends Component {
                         </li>            
                     </ul>
                 </div>
->>>>>>> 3e388c65648f36944073265c02a51247c3b53e87
             </div>
         )
     }
