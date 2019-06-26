@@ -1,0 +1,263 @@
+.yy_header {
+    font-size: 0.36rem;
+    color: #c9a96e;
+    text-align: center;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 0 0.1rem 0 #d0cccc;
+    z-index: 9999;
+}
+
+.yy_main_title {
+    height: 0.6rem;
+    border-bottom: 3px solid #c9a96e;
+    position: fixed;
+    width: 100%;
+    top: 0.88rem;
+    background-color: #f2f2f2;
+    z-index: 99999;
+    box-sizing: content-box;
+
+    .inner {
+        width: 6.7rem;
+        margin: 0 auto;
+    }
+
+    .flex-pack-justify {
+        justify-content: space-between;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    ul {
+        li {
+            font-size: 0.3rem;
+            width: 3rem;
+            background-color: #fff;
+            color: #c9a96e;
+            text-align: center;
+            height: 0.6rem;
+            line-height: 0.6rem;
+            margin-right: 0.1rem;
+            box-sizing: border-box;
+
+            &.yiactive {
+                background-color: #c9a96e;
+                color: #fff;
+            }
+
+            &.yiunactive {
+                background-color: #fff;
+                color: #c9a96e;
+            }
+        }
+    }
+}
+
+.yishuo {
+    margin-top: 2rem;
+
+    .inner {
+        width: 6.7rem;
+        margin: 0 auto;
+        margin-bottom: 0.4rem;
+    }
+}
+
+.yy_main_list {
+    height: 4.54rem;
+    background-color: #fff;
+    margin-top: 0.32rem;
+
+    .yy_coverimg {
+        height: 3.5rem;
+    }
+
+    .yy_text {
+        text-align: center;
+        font-size: 0.26rem;
+        height: 0.9rem;
+        color: #666;
+        margin-top: 0.2rem;
+
+        .yi2 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 4.8rem;
+            display: inline-block;
+        }
+    }
+}
+
+.gb_header {
+    font-size: 0.3rem;
+    color: #c9a96e;
+    text-align: center;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    background-color: #fff;
+    border-bottom: 2px solid #f2f2f2;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    img {
+        width: 0.2rem;
+        position: absolute;
+        left: 0.4rem;
+        top: 50%;
+        margin-top: -0.2rem;
+    }
+}
+
+.inner2 {
+    width: 6rem;
+    margin: 0 auto;
+}
+
+.searchname {
+    padding: 0.2rem 0;
+    text-align: center;
+    color: #c9a96e;
+}
+
+.flex_direction {
+    flex-direction: column;
+}
+
+.flex-pack-justify {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.clearfix {
+    overflow: hidden;
+}
+
+.list_items {
+    width: 1.2rem;
+    text-align: center;
+    margin-right: 0.6rem;
+    float: left;
+    margin-bottom: 0.3rem;
+
+    &:nth-child(4n) {
+        margin-right: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.list_items img {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+
+.list_items_name {
+    color: #333;
+    font-size: 0.2rem;
+    padding-top: 0.2rem;
+}
+
+i {
+    font-style: normal;
+}
+
+.nominate {
+    width: 100%;
+    height: 4.14rem;
+    background-color: #fff;
+    padding: 0.42rem 0;
+    margin-top: 2rem;
+    box-sizing: content-box;
+
+    .authordes {
+        color: #999;
+        font-size: 0.18rem;
+        padding-left: 0.32rem;
+    }
+
+    .line {
+        display: inline-block;
+        width: 0.4rem;
+        height: 0.02rem;
+        background-color: #c9a96e;
+    }
+
+    .nominate_title {
+        font-size: 0.32rem;
+        width: 1.8rem;
+        height: 0.4rem;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+.authorinfo img {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+
+.align_items {
+    -ms-flex-align: center;
+    align-items: center;
+    box-align: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+}
+
+.works {
+    padding-top: 0.3rem;
+    overflow: hidden;
+}
+
+.swiper-container2 {
+    padding-bottom: 0.72rem;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.describe_author {
+    font-size: 0.16rem;
+    color: #999;
+    height: 0.5rem;
+}
+
+.swiper-slide {
+    width: 140px;
+    flex-shrink: 0;
+}
+
+.author_cover {
+    height: 1.8rem;
+}

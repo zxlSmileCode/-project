@@ -1,0 +1,152 @@
+div {
+    font-size: 0.3rem;
+}
+
+.type {
+    height: 0.75rem;
+    width: 100%;
+    line-height: 0.75rem;
+    border-bottom: 1px solid #c9a96e;
+    background-color: #fff;
+    box-sizing: content-box;
+    position: fixed;
+
+    .inner {
+        width: 6.7rem;
+        margin: 0 auto;
+        line-height: inherit;
+    }
+
+    li {
+        display: inline-block;
+    }
+}
+
+.flex-pack-justify2 {
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+}
+
+.flex {
+    display: flex;
+}
+
+.active {
+    color: #c9a96e;
+    border-bottom: 2px solid #c9a96e;
+}
+
+.works_list {
+    padding-top: 0.2rem;
+    margin-top: 1.7rem;
+    overflow: hidden;
+    column-count: 2;
+
+    .list_left {
+        float: left;
+        width: 3.2rem;
+    }
+
+    .list_right {
+        float: left;
+        width: 3.2rem;
+        margin-left: 0.2rem;
+    }
+
+    .box {
+        margin-bottom: 0.2rem;
+        -webkit-column-break-inside: avoid
+    }
+
+    .modular_mains {
+        width: 3.2rem;
+        margin-right: 0.18rem;
+        margin-bottom: 0.2rem;
+        box-shadow: rgb(236, 236, 236) 1px 1px 1px;
+    }
+
+    .modular_main {
+        width: 100%;
+        background-color: #fff;
+        overflow: hidden;
+    }
+
+    .cover_mapyt img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .modular_mains .describe_top {
+        padding: 0.1rem;
+        /* height: 0.62rem; */
+    }
+
+    a span{
+        color: #000;
+    }
+
+    .modular_mains .describe_top span {
+        font-size: 0.24rem;
+    }
+
+    .text_color {
+        color: #c9a96e;
+    }
+
+    .fl {
+        float: left;
+    }
+
+    .view {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAOCAYAAAArMezNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDFDMTMxOTU0QUM2MTFFODhEQzRGQTYyODVBN0RGOEIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDFDMTMxOTY0QUM2MTFFODhEQzRGQTYyODVBN0RGOEIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowMUMxMzE5MzRBQzYxMUU4OERDNEZBNjI4NUE3REY4QiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowMUMxMzE5NDRBQzYxMUU4OERDNEZBNjI4NUE3REY4QiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrXCPsgAAAGzSURBVHjajNRJKIRhHMdxI1GE5GJPkeXCBSd7WSbEyRIyB3Kw5IacqbnhaKkh4iJLMpTtoBykCKFsoUgRcVCyfJ/xn3q98w6e+jzl9czvfbb/a/qsK/T4pXmjAEkIgwm32MEqXjxsdsMfmtwEZ6Id8XjFPR7wjiAEww9X6Cd85q9gNXgWiZjGIHbdrEa91IJq3KGMF1w7/+mpGZjvWNr3DCPQrAuNQqzm72N0Eqae7ztmbzHX6oNzsYR6FONTE+CLNazLGPWy6B9zt9nVzIswSnilMzgcKyjFsMGS1Wy8kIwE7GFbnmnDF+jTMEF4igreQC/mDEJL5CZk4BlvqMEh6lxG2+xbsoWrnrKsAzcHFIoLg+fXcg5GTa3GXwXnyemHGAxS1yhbN7t0lGPEZbTF7EO/iQa1T8vowI2c+qlm6J3s/RSq8AEz2lxWYjEH0D9igC0Zct4KK7pxglbdPOakILbkIGPQpwutoH/CJKGNRgWi7vI4ztAjxfJby0EXUtFE6NhfJW11VNL3jTjCuSxdbUWkbFm8fEsWCGz577fC2bLk4schUApHVecl5rHo7iP0JcAAIsV2oFsIXKMAAAAASUVORK5CYII=)
+            no-repeat 0 / contain;
+        background-size: 0.3rem;
+        padding-left: 0.4rem;
+    }
+
+    .text_color1 {
+        color: #ea6a52;
+    }
+
+    .fr {
+        float: right;
+    }
+
+    .modular_mains .describe_bottom {
+        padding: 0 0.1rem;
+        height: 0.6rem;
+        line-height: 0.6rem;
+    }
+
+    .flex-pack-justify {
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    
+    .flex_direction {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .describe_bottom span {
+        font-size: 0.18rem;
+    }
+
+    .text_color2 {
+        color: #999;
+    }
+
+    i {
+        font-style: normal;
+    }
+}
+
+.yt_header .search {
+    width: .4rem;
+    position: absolute;
+    right: .4rem;
+    top: 50%;
+    margin-top: -.2rem;
+}
