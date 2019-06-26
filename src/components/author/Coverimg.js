@@ -6,7 +6,7 @@ class Coverimg extends React.Component {
         if (anchorName) {
             let anchorElement = document.getElementById(anchorName);
             if (anchorElement) {
-                anchorElement.scrollIntoView();
+                anchorElement.scrollIntoView({behavior: 'smooth'});
             }
         }
     };
