@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import connect from 'react-redux';
+import { Link, withRouter } from "react-router-dom";
+import axios from "axios";
 import './search.css';
 // import axios from 'axios';
 
@@ -7,7 +9,8 @@ class Search extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            last:[]
+            last:[],
+            aut:''
         }
     }
     getLast(){
@@ -36,7 +39,10 @@ class Search extends Component {
         }
     }
     showList(index){
-        this.refs.hSearch.value = this.state.last[index];
+        // this.refs.hSearch.value = this.state.last[index];
+        this.setState({
+            aut:this.state.last[index]
+        })
     }
     clearLast(){
         localStorage.setItem('search',[]);
@@ -48,7 +54,19 @@ class Search extends Component {
         window.onkeypress = (ev) =>{
             if(ev.keyCode == 13){
                 if(this.refs.hSearch.value){
-                    
+                    axios.post('https://api.jinyishe.cn/rest/authorList')
+                    .then(res=>{
+                        let data = res.data.data.letterList;
+                        data.some((item,index)=>{
+                            item.list.forEach((ele,i)=>{
+                                if(ele.authorName == this.state.aut){
+                                    console.log(ele.id);
+                                    this.props.history.push(`/authordetail/${ele.id}`);
+                                }
+                            });
+                        })
+                    })
+                    // this.props.history.push({pathname: `/Detail/${this.refs.hSearch.value}`, id})
                 }
             }
         }
@@ -83,23 +101,31 @@ class Search extends Component {
                         <div data-v-34d9b3dc="" className="s_titlemain inner clearfix">
                             <form
                                 data-v-34d9b3dc=""
-                                action="#"
-                                accept-charset="UTF-8"
+                                action=""
+                                acceptCharset="UTF-8"
                                 style={{
                                     width: '5.5rem',float:'left'
                                 }}>
                                 <input
                                     ref="hSearch"
                                     data-v-34d9b3dc=""
-                                    placeholder="搜索画家姓名，作品风格"
+                                    placeholder="搜索画家姓名(必须100%准确)"
                                     type="search"
+                                    onChange={
+                                        ()=>{
+                                            this.setState({
+                                                aut:this.refs.hSearch.value
+                                            })
+                                        }
+                                    }
+                                    value={this.state.aut}
                                     className="s_content"
                                     onBlur={this.setLast.bind(this)}
                                     onFocus={this.getLast.bind(this)} /></form>
                                 <span data-v-34d9b3dc="" className="cancel" onClick={this.goDown.bind(this)}>取消</span>
                             </div>
                         </div>
-                        <div data-v-34d9b3dc="" className="history inner clearfix">
+                        <div data-v-34d9b3dc="" className="history inner clearfix" style={{marginTop:'5px'}}>
                             <span data-v-34d9b3dc="">历史搜索</span>
                             <img
                                 alt=""
@@ -117,7 +143,7 @@ class Search extends Component {
                             <ul>
                             {
                                 Array.from(this.state.last).map((item,index)=>{
-                                    return <li onClick={this.showList.bind(this,index)} key={index}>{item}</li>
+                                    return <li style={{display:'block'}} onClick={this.showList.bind(this,index)} key={index}>{item}</li>
                                 })
                             }
                             </ul>
@@ -143,4 +169,4 @@ class Search extends Component {
     }
 }
 
-export default Search;
+export default withRouter(Search);

@@ -1,0 +1,13 @@
+.inner {
+    width: 6.7rem;
+    margin: 0 auto;
+    line-height: normal
+}
+
+.content {
+    font-size: 0.3rem;
+}
+
+img {
+    width: 100%;
+}
