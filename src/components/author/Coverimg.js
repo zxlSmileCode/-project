@@ -6,11 +6,7 @@ class Coverimg extends React.Component {
         if (anchorName) {
             let anchorElement = document.getElementById(anchorName);
             if (anchorElement) {
-<<<<<<< HEAD
-                anchorElement.scrollIntoView({behavior: 'smooth'});
-=======
-                anchorElement.scrollIntoView({behavior:"smooth"});
->>>>>>> 0433095247f248a36bbf5f6b563cbb5c305438d6
+                anchorElement.scrollIntoView({ behavior: "smooth" });
             }
         }
     };
@@ -21,7 +17,9 @@ class Coverimg extends React.Component {
                 <div
                     className="coverimg"
                     style={{
-                        background: `url(${this.props.data.topImage}) center center / cover no-repeat`,
+                        background: `url(${
+                            this.props.data.topImage
+                        }) center center / cover no-repeat`,
                         height: "100vh",
                         position: "relative"
                     }}>
@@ -40,7 +38,9 @@ class Coverimg extends React.Component {
                         <div
                             className="authorphoto"
                             style={{
-                                background: `url(${this.props.data.headImage}) center center / cover no-repeat`
+                                background: `url(${
+                                    this.props.data.headImage
+                                }) center center / cover no-repeat`
                             }}
                         />
                         <div className="mainname">{this.props.data.authorName}</div>
