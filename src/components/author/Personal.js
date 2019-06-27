@@ -3,9 +3,13 @@ import "./author.scss";
 import axios from "axios";
 
 class Personal extends React.Component {
-    state = {
-        list: []
-    };
+    constructor(props){
+        super(props);
+        console.log(props);
+        this.state = {
+            list:[]
+        }
+    }
 
     componentDidMount() {
         this.getList(this.props.id);

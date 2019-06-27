@@ -3,6 +3,7 @@ import { store } from '../../store';
 import { Tabs, WhiteSpace, Badge } from 'antd-mobile';
 import './index.scss';
 import { getData } from '../../api';
+import Search from '../../components/Search/search';
 
 const tabs = [
     { title: <Badge >画品</Badge> },
@@ -16,8 +17,29 @@ const tabs2 = [
     // { title: 'Third Tab', sub: '3' },
 ];
 class Yigou extends Component {
-    state = {
-        result: []
+    constructor(props){
+        super(props);
+        this.state={
+          result: [],
+          updown:-667
+        }
+    }
+    up(){
+        let timer = null;
+        let long = -667;
+        timer = setInterval(() => {
+            long += 40;
+            if(long > 0){
+                long = 0;
+                this.setState({
+                    updown:0
+                });
+                clearInterval(timer);
+            }
+            this.setState({
+                updown:long
+            })
+        }, 20);
     }
     async componentDidMount() {
         store.dispatch({ type: 'UPDATE_TAB', payload: "yigou" })
@@ -29,7 +51,7 @@ class Yigou extends Component {
         return (
             <div className="yigou">
                 <div className="header">
-                    <img src="imgs/search.png" />
+                    <img alt="" src="imgs/search.png" onClick={this.up.bind(this)}/>
                     <span>艺购</span>
                 </div>
                 <div style={{height:'44px'}}></div>
@@ -64,6 +86,7 @@ class Yigou extends Component {
                         </ul>
                     </div>
                 </Tabs>
+                <Search go={this.state.updown}></Search>
             </div>
         );
     }

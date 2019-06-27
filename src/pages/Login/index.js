@@ -7,19 +7,17 @@ class Login extends Component {
         logOk: false
     }
     getUser() {
-        // if(Cookies.get('user')){     if(this.refs.user.value == Cookies.get('user')
-        // && this.refs.psw.value == Cookies.get('psw')){         this.setState({
-        //      logOk:true         })     }else{         console.log('该用户不存在或者密码错误');
-        //  } }
         axios
             .post("http://106.14.119.190:3019/login", {
                 username: this.refs.user.value,
                 password: this.refs.psw.value
             })
             .then((res) => {
-                if (res.data == 'yes') {
-                    console.log('登录成功');
-                    Cookies.set('user',this.refs.user.value,{expires:1});
+                if (res.data == 'no') {
+                    console.log('用户名或密码错误');
+                }else{
+                    Cookies.set('token',res.data,{expires:1});
+                    window.location.href="/#/home";
                 }
             })
     }
@@ -67,7 +65,7 @@ class Login extends Component {
                 > 立即登录 </div> <div className="btn_part register_btn" > 
                 <Link to="/reg" style={{
                     color: '#fff'
-                }}>
+                }}>现在注册
                 </Link>
             </div>               
         </div>

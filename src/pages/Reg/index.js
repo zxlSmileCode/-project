@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { store } from '../../store';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './common.css';
 class Reg extends Component {
@@ -24,7 +22,9 @@ class Reg extends Component {
                     password: this.refs.psw.value
                 })
                 .then((res) => {
-                    console.log(res);
+                    if(res.data == 'yes'){
+                        window.location.href="/#/login";
+                    }
                 })
         }else{
             console.log('验证码错误');

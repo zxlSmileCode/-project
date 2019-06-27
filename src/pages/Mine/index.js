@@ -1,8 +1,21 @@
 import React, { Component } from 'react';
 import { store } from '../../store';
+import Cookies from 'js-cookie';
 import './index.scss';
 
 class Mine extends Component {
+    state = {
+        token:''
+    }
+    componentWillMount(){
+        if(Cookies.get('token')){
+            this.setState({
+                token:Cookies.get('token')
+            })
+        }else{
+            window.location.href="/#/login";
+        }
+    }
     componentDidMount() {
         store.dispatch({ type: 'UPDATE_TAB', payload: "mine" })
     }
@@ -16,8 +29,8 @@ class Mine extends Component {
                 <div className="my_info">
 
                     <div className="my_info_bg" style={{ width: '100%', height: '172px', background: 'url(imgs/beijing.png)no-repeat 50%/cover' }}>
-                        <img src="imgs/mine.png" alt=""/>
-                        <sapn>138****4855</sapn>
+                        <img src="imgs/mine.png" />
+                        <span>{this.state.token}</span>
                     </div>
                     <div className="total_assets">
                         <div className="totle">
