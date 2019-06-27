@@ -12,7 +12,6 @@ class AuthorDetail extends React.Component {
 
     componentDidMount() {
         store.dispatch({ type: "UPDATE_TAB", payload: "yiyan" });
-        console.log(this);
         const { id } = this.props.match.params;
         this.getDetial(id);
     }
@@ -20,7 +19,6 @@ class AuthorDetail extends React.Component {
     async getDetial(id) {
         return await axios.post(`https://api.jinyishe.cn/rest/authorInfo?authorId=${id}`).then(res => {
             let { data } = res.data;
-            console.log(data);
             this.setState({
                 data: data
             });
