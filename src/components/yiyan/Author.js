@@ -2,13 +2,42 @@ import React from "react";
 import "./yiyan.scss";
 import axios from "axios";
 import { Link, withRouter } from "react-router-dom";
-import Nominate from "./Nominate"
+import Nominate from "./Nominate";
 
 class Author extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            list: []
+            list: [],
+            zimu: [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F",
+                "G",
+                "H",
+                "I",
+                "J",
+                "K",
+                "L",
+                "M",
+                "N",
+                "O",
+                "P",
+                "Q",
+                "R",
+                "S",
+                "T",
+                "U",
+                "V",
+                "W",
+                "X",
+                "Y",
+                "Z",
+                "#"
+            ]
         };
     }
 
@@ -17,7 +46,7 @@ class Author extends React.Component {
         if (anchorName) {
             let anchorElement = document.getElementById(anchorName);
             if (anchorElement) {
-                anchorElement.scrollIntoView();
+                anchorElement.scrollIntoView({ behavior: "smooth" });
             }
         }
     };
@@ -63,7 +92,9 @@ class Author extends React.Component {
                                                         pathname: `/authordetail/${item.id}`
                                                     }}>
                                                     <img src={item.headImage} alt="" />
-                                                    <div className="list_items_name">{item.authorName}</div>
+                                                    <div className="list_items_name">
+                                                        {item.authorName}
+                                                    </div>
                                                 </Link>
                                             </li>
                                         );
@@ -105,33 +136,13 @@ class Author extends React.Component {
                         fontSize: "0.24rem",
                         zIndex: 999
                     }}>
-                    <i onClick={() => this.scrollToAnchor("A")}>A</i>
-                    <i onClick={() => this.scrollToAnchor("B")}>B</i>
-                    <i onClick={() => this.scrollToAnchor("C")}>C</i>
-                    <i onClick={() => this.scrollToAnchor("D")}>D</i>
-                    <i onClick={() => this.scrollToAnchor("E")}>E</i>
-                    <i onClick={() => this.scrollToAnchor("F")}>F</i>
-                    <i onClick={() => this.scrollToAnchor("G")}>G</i>
-                    <i onClick={() => this.scrollToAnchor("H")}>H</i>
-                    <i onClick={() => this.scrollToAnchor("I")}>I</i>
-                    <i onClick={() => this.scrollToAnchor("J")}>J</i>
-                    <i onClick={() => this.scrollToAnchor("K")}>K</i>
-                    <i onClick={() => this.scrollToAnchor("L")}>L</i>
-                    <i onClick={() => this.scrollToAnchor("M")}>M</i>
-                    <i onClick={() => this.scrollToAnchor("N")}>N</i>
-                    <i onClick={() => this.scrollToAnchor("O")}>O</i>
-                    <i onClick={() => this.scrollToAnchor("P")}>P</i>
-                    <i onClick={() => this.scrollToAnchor("Q")}>Q</i>
-                    <i onClick={() => this.scrollToAnchor("R")}>R</i>
-                    <i onClick={() => this.scrollToAnchor("S")}>S</i>
-                    <i onClick={() => this.scrollToAnchor("T")}>T</i>
-                    <i onClick={() => this.scrollToAnchor("U")}>U</i>
-                    <i onClick={() => this.scrollToAnchor("V")}>V</i>
-                    <i onClick={() => this.scrollToAnchor("W")}>W</i>
-                    <i onClick={() => this.scrollToAnchor("X")}>X</i>
-                    <i onClick={() => this.scrollToAnchor("Y")}>Y</i>
-                    <i onClick={() => this.scrollToAnchor("Z")}>Z</i>
-                    <i onClick={() => this.scrollToAnchor("#")}>#</i>
+                    {this.state.zimu.map((item, index) => {
+                        return (
+                            <i onClick={() => this.scrollToAnchor(`${item}`)} key={index}>
+                                {item}
+                            </i>
+                        );
+                    })}
                 </div>
 
                 <div
