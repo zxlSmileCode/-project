@@ -103,35 +103,35 @@ class Home extends Component {
                     <div className="yishujia-b">
                         <ul>
                             <li>
-                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/57f621fdc34a4eaabe3b5ff398bae9ed.png" />
+                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/57f621fdc34a4eaabe3b5ff398bae9ed.png" alt=""/>
                                 <p>蓝正辉</p>
                             </li>
                             <li>
-                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/d95fcc2be3734e90bdc1a356798dbb2f.jpg" />
+                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/d95fcc2be3734e90bdc1a356798dbb2f.jpg" alt=""/>
                                 <p>马天戈</p>
                             </li>
                             <li>
-                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/2608a8c715454ec7a5c615d8e5f03de2.jpg" />
+                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/2608a8c715454ec7a5c615d8e5f03de2.jpg" alt=""/>
                                 <p>朱叶青</p>
                             </li>
                             <li>
-                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/dff15f87ac24414dadb3eea9afa84f63.jpg" />
+                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/dff15f87ac24414dadb3eea9afa84f63.jpg" alt=""/>
                                 <p>叶永青</p>
                             </li>
                             <li>
-                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/aca252fe6671433d8e5a7cc898c5b242.jpg" />
+                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/aca252fe6671433d8e5a7cc898c5b242.jpg" alt=""/>
                                 <p>曹宝麟</p>
                             </li>
                             <li>
-                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/0040c5df9bbf4b548e409055397ae4d9.jpg" />
+                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/0040c5df9bbf4b548e409055397ae4d9.jpg" alt=""/>
                                 <p>陈平</p>
                             </li>
                             <li>
-                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/d8ce5f1650e24fc18798c16cedfbcef8.jpg" />
+                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/d8ce5f1650e24fc18798c16cedfbcef8.jpg" alt=""/>
                                 <p>何加林</p>
                             </li>
                             <li>
-                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/b5e747cbedf44502a771f37ab4582850.jpg" />
+                                <img src="http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201810/b5e747cbedf44502a771f37ab4582850.jpg" alt=""/>
                                 <p>江宏伟</p>
                             </li>
                         </ul>

@@ -49,7 +49,7 @@ class App extends React.Component {
                     </Switch>
                 </main>
                 {
-                    <footer className="footer">
+                    <footer className="footer" >
                         <ul>
                             <li
                                 onClick={this.goto.bind(this, "home")}

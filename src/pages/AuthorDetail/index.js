@@ -14,6 +14,8 @@ class AuthorDetail extends React.Component {
         store.dispatch({ type: "UPDATE_TAB", payload: "yiyan" });
         const { id } = this.props.match.params;
         this.getDetial(id);
+        this.refs.layout.scrollIntoView();
+        console.log(this)
     }
 
     async getDetial(id) {
@@ -27,7 +29,7 @@ class AuthorDetail extends React.Component {
 
     render() {
         return (
-            <div>
+            <div ref={'layout'} >
                 <Header />
                 <Coverimg data={this.state.data} />
                 <Personal data={this.state.data} id={this.props.match.params.id} />
