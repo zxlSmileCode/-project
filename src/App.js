@@ -12,6 +12,7 @@ import Cart from "./pages/Cart";
 import Mine from "./pages/Mine";
 import Login from "./pages/Login";
 import Reg from "./pages/Reg";
+import Indent from "./pages/Indent";
 
 import Yiyandetail from "./pages/YiyanDetail";
 import AuthorDetail from "./pages/AuthorDetail";
@@ -40,10 +41,11 @@ class App extends React.Component {
                         <Route exact path="/authordetail/:id" component={AuthorDetail} />
                         <Route exact path="/yiyan/:now" component={Yiyan} />
                         <Route path="/detail/:id" component={Detail} />
-                        <Route path="/cart" component={Cart} />
+                        <Route path="/cart/:id" component={Cart} />
                         <Route path="/mine" component={Mine} />
                         <Route path="/login" component={Login} />
                         <Route path="/reg" component={Reg} />
+                        <Route path="/indent" component={Indent} />
                         <Route exact path="/yiyandetail/:id" component={Yiyandetail} />
                         <Redirect from="/" to="/home" />
                     </Switch>

@@ -18,6 +18,7 @@ class Mine extends Component {
     }
     componentDidMount() {
         store.dispatch({ type: 'UPDATE_TAB', payload: "mine" })
+        this.refs.layout.scrollIntoView()
     }
     goto(path) {
         let { history } = this.props;
@@ -25,7 +26,7 @@ class Mine extends Component {
     }
     render() {
         return (
-            <div className="my">
+            <div className="my" ref={"layout"}>
                 <div className="my_info">
 
                     <div className="my_info_bg" style={{ width: '100%', height: '172px', background: 'url(imgs/beijing.png)no-repeat 50%/cover' }}>

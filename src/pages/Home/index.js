@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { getData } from '../../api';
 import { Carousel, WingBlank } from 'antd-mobile';
+import { Link} from "react-router-dom";
 import './index.scss';
 import '../../css/reset.css';
-// import { Tabs, Button, WhiteSpace, WingBlank, Badge } from 'antd-mobile';
 import { store } from '../../store';
 
 
@@ -32,8 +32,6 @@ class Home extends Component {
                     <Carousel
                         autoplay={true}
                         infinite
-                        beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-                        afterChange={index => console.log('slide to', index)}
                     >
                         {this.state.data.map(val => (
                             <a
@@ -55,25 +53,20 @@ class Home extends Component {
                         ))}
                     </Carousel>
                 </WingBlank>
-                <div className="yishuo">
-                    <div className="yishuo-t">
-                        <span>一 艺购  一</span><span>></span>
-                    </div>
-                    <div className="yishuo-b">
-                        <div className="tupian" style={{ width: '335px', height: '175px', background: "url(http://jinyishe2.oss-cn-hangzhou.aliyuncs.com/cms/201906/df311e6bd79a46da98cebaa73f30fbfa.jpg?x-oss-process=image/resize,s_400) center center / cover no-repeat" }}></div>
-                        <div className="wenzi"> 辟谣！马云真的没买潘天寿的“猫”</div>
-                    </div>
-                </div>
                 <div className="yicang">
                     <div className="yicang-box">
                         <div className="box-t">
-                            <span>一 艺购  一</span><span>></span>
+                            <span>一 艺藏  一</span><span>></span>
                         </div>
                         <div className="box-b">
                             <ul>
                                 {
                                     this.state.jingPingBeanList.map(item =>
                                         <li key={item.borrowId}>
+                                            <Link
+                                                to={{
+                                                    pathname: `/detail/${item.borrowId}`
+                                                }}>
                                             <div data-v-539475ac="" className="cover_map" style={{ background: "url(" + item.img + ") center center / cover no-repeat" }}></div>
                                             <div className="cover_b">
                                                 <h4>{item.borrowName}</h4>
@@ -81,6 +74,7 @@ class Home extends Component {
                                                 <span>￥{item.account}</span><br />
                                                 <i>折扣：<span>{item.discount * 10}折</span>期限：<span>{item.timeLimit}天</span></i>
                                             </div>
+                                            </Link>
                                         </li>)
                                 }
                             </ul>

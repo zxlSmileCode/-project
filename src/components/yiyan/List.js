@@ -41,7 +41,7 @@ class List extends React.Component {
 
     render() {
         return (
-            <div className="yishuo">
+            <div className="yishuobox">
                 <div className="inner">{this.randerList(this.state.list)}</div>
             </div>
         );
