@@ -40,10 +40,10 @@ class Tab extends React.Component {
                             国画
                         </li>
                         <li
-                            className={this.state.active === 4 ? "active" : null}
-                            onClick={this.activeTab.bind(this, 4)}>
                             书法
-                        </li>
+                           className={this.state.active === 4 ? "active" : null}
+                            onClick={this.activeTab.bind(this, 4)}>
+                         </li>
                     </ul>
                 </div>
             </div>

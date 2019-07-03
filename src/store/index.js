@@ -3,7 +3,7 @@ import { createStore } from "redux";
 const initState = {
     currentTab: "home",
     yiyantab: "yishuo",
-    typetab : 0
+    typetab: 0
 };
 
 let store = createStore((state = initState, action) => {
